@@ -1,0 +1,63 @@
+@import 'variables';
+
+.navbar-default
+{
+    border-radius: 0px;
+    background-color: @background-color;
+    border: none;
+    position: relative;
+    margin-bottom: 0px;
+    text-align: center;
+}
+
+/* The image provided already has padding, remove all the css padding */
+.navbar-default .navbar-brand
+{
+    padding: 8px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.navbar-default .site-links
+{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+.navbar-default .center-nav
+{
+    display: inline-block;
+    float: none;
+    vertical-align: top;
+}
+
+.navbar-default .navbar-nav > li a
+{
+    color: rgba(255, 255, 255, 0.8);
+    text-transform: uppercase;
+}
+
+.navbar-default .navbar-nav > li:hover
+{
+    background-color: transparent;
+}
+
+.navbar-default .navbar-nav > li:hover a
+{
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}
+
+.navbar-default .navbar-nav > li.active a
+{
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.navbar-default .navbar-nav > li.active:hover a
+{
+    color: #ffffff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
