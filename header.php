@@ -34,12 +34,13 @@
         </ul>
 
         <ul class="nav navbar-nav site-links">
-            <li><a href="#" class='blizz-icon active'><img src="<?php echo get_template_directory_uri() . '/images/blizz-icons/blizzpro.png'; ?>" /></a></li>
-            <li><a href="#" class='blizz-icon'><img src="<?php echo get_template_directory_uri() . '/images/blizz-icons/overwatch.png'; ?>" /></a></li>
-            <li><a href="#" class='blizz-icon'><img src="<?php echo get_template_directory_uri() . '/images/blizz-icons/hearthstone.png'; ?>" /></a></li>
-            <li><a href="#" class='blizz-icon'><img src="<?php echo get_template_directory_uri() . '/images/blizz-icons/hots.png'; ?>" /></a></li>
-            <li><a href="#" class='blizz-icon'><img src="<?php echo get_template_directory_uri() . '/images/blizz-icons/wow.png'; ?>" /></a></li>
-            <li><a href="#" class='blizz-icon'><img src="<?php echo get_template_directory_uri() . '/images/blizz-icons/diablo.png'; ?>" /></a></li>
-            <li><a href="#" class='blizz-icon'><img src="<?php echo get_template_directory_uri() . '/images/blizz-icons/starcraft.png'; ?>" /></a></li>
+            <?php
+            foreach (blizzpro_site_links() as $key => $link): ?>
+            <li>
+                <a href="<?php echo $link; ?>" class='blizz-icon'>
+                    <img src="<?php echo get_template_directory_uri() . '/images/blizz-icons/' . $key; ?>" />
+                </a>
+            </li>
+            <?php endforeach; ?>
         </ul>
     </nav>

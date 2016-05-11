@@ -21,15 +21,7 @@ if ( have_posts() ) : the_post();
 
                 <div class="comments-container">
                     <?php
-                    $template = apply_filters('comments_template', '');
-
-                    if (file_exists($template))
-                    {
-                        echo '</br>';
-                        echo '<div class="comments-wrapper">';
-                        require_once $template;
-                        echo '</div>';
-                    }
+                    //comments_template();
                     ?>
                 </div>
 

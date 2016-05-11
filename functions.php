@@ -5,7 +5,6 @@
  * @package WordPress
  * @subpackage BlizzPro
  */
-
 require_once __DIR__ . '/inc/helper.php';
 
 add_theme_support('post-thumbnails');
@@ -16,6 +15,19 @@ add_image_size('featured-thumb', 268, 153, ['center', 'center']);
 
 define('BLIZZPRO_FEATURE_LIMIT', 6);
 define('BLIZZPRO_RELATED_LIMIT', 5);
+
+function blizzpro_site_links()
+{
+    return [
+        "blizzpro.png"          => "",
+        "ico_overwatch.png"     => "",
+        "ico_hearthstone.png"   => "",
+        "hots.png"              => "",
+        "ico_wow.png"           => "",
+        "diablo.png"            => "",
+        "starcraft.png"         => ""
+    ];
+}
 
 function blizzpro_posted_by($time = true)
 {
