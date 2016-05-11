@@ -13,7 +13,7 @@
         <?php the_title(sprintf('<h5><a href="%s" rel="bookmark">', esc_url( get_permalink())), '</a></h5>'); ?>
 
         <div class='media-bottom-fixed'>
-            <?php blizzpro_posted_by(); ?>
+            <?php get_template_part('template-parts/posted-by'); ?>
         </div>
     </div>
 </div>

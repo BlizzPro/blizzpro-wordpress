@@ -14,9 +14,9 @@ if ( have_posts() ) : the_post();
             <div class="col-xs-8">
 
                 <?php
-                the_breadcrumb();
+                get_template_part('template-parts/breadcrumb');
                 get_template_part('template-parts/content', 'single');
-                blizzpro_social();
+                get_template_part('template-parts/social');
                 ?>
 
                 <div class="comments-container">

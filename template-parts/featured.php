@@ -15,7 +15,7 @@
             <p>
             <?php echo wp_trim_words(get_the_excerpt(), '25'); ?>
             </p>
-            <?php blizzpro_posted_by(); ?>
+            <?php get_template_part('template-parts/posted-by'); ?>
         </div>
     </div>
 </div>

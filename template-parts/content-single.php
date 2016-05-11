@@ -11,7 +11,7 @@
         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
     </header>
     <p>
-        <?php blizzpro_posted_by(); ?>
+        <?php get_template_part('template-parts/posted-by'); ?>
     </p>
 
     <?php the_content(); ?>

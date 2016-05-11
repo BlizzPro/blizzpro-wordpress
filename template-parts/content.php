@@ -12,7 +12,7 @@
 
         <?php the_title(sprintf('<h4 class="media-heading"><a href="%s" rel="bookmark">', esc_url( get_permalink())), '</a></h4>'); ?>
         <p>
-            <?php blizzpro_posted_by(); ?>
+            <?php get_template_part('template-parts/posted-by'); ?>
         </p>
         <?php the_excerpt(); ?>
         <div class='media-bottom-fixed'>
