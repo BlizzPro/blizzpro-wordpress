@@ -6,9 +6,11 @@
  * @subpackage BlizzPro
  */
 
+require_once __DIR__ . '/inc/scripts_css.php';
 require_once __DIR__ . '/inc/constants.php';
 require_once __DIR__ . '/inc/helper.php';
 require_once __DIR__ . '/inc/settings.php';
+require_once __DIR__ . '/inc/ajax.php';
 
 
 function blizzpro_site_links()
@@ -22,18 +24,4 @@ function blizzpro_site_links()
         "diablo.png"            => "",
         "starcraft.png"         => ""
     ];
-}
-
-function blizzpro_home_articles()
-{
-    $home = new WP_Query([
-        'caller_get_posts' => 1
-    ]);
-
-    while ($home->have_posts()) {
-        $home->the_post();
-        get_template_part('template-parts/content', get_post_format());
-    }
-
-    wp_reset_postdata();
 }

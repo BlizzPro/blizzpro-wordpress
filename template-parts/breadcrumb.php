@@ -1,4 +1,4 @@
-<ul class="crumbs">';
+<ul class="crumbs">
 <?php if (!is_home()):?>
     <li><a href="<?php echo get_option('home'); ?>">Home</a></li>
     <?php if (is_single()): ?><li><?php the_title(); ?></li>

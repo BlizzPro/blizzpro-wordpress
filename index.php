@@ -48,11 +48,9 @@ get_header(); ?>
                     <h2>Latest News</h2>
                     <div class="row">
                         <div class="col-xs-12">
-                            <?php blizzpro_home_articles(); ?>
-
-                            <a href="" class='load-more'>Load More</a>
+                            <div id="latest-news"></div>
+                            <a href="javascript:void(0);" class='load-more'>Load More</a>
                         </div>
-
                     </div>
                 </div>
             </div>
