@@ -14,9 +14,10 @@ if ( have_posts() ) : the_post();
             <div class="col-xs-8">
 
                 <?php
-                get_template_part('template-parts/breadcrumb');
+                get_template_part('template-parts/breadcrumb', 'single');
                 get_template_part('template-parts/content', 'single');
-                get_template_part('template-parts/social');
+                get_template_part('template-parts/social', 'single');
+                get_template_part('template-parts/author', 'single');
                 ?>
 
                 <div class="comments-container">

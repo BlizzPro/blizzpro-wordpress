@@ -1,20 +1,24 @@
 <?php
-$cdn = '//cdnjs.cloudflare.com';
+// -- Frontend Scripts/CSS -- //
+add_action('wp_enqueue_scripts', function () {
 
-// -- CSS -- //
-wp_enqueue_style('bootstrap.min.css', $cdn . '/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css');
-wp_enqueue_style('style.css', get_template_directory_uri() . '/style.css');
+    $cdn = '//cdnjs.cloudflare.com';
 
-// -- JavaScript -- //
-wp_enqueue_script('jquery.min.js', $cdn . '/ajax/libs/jquery/2.2.3/jquery.min.js', [], null, true);
-wp_enqueue_script('bootstrap.min.js', $cdn . '/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js', [], null, true);
-wp_register_script('scripts.js', get_template_directory_uri() . '/scripts.js', [], null, true);
-wp_enqueue_script('html5shiv.min.js', $cdn . '/ajax/libs/html5shiv/3.7.3/html5shiv.min.js', [], null, true);
-wp_enqueue_script('respond.min.js', $cdn . '/ajax/libs/respond.js/1.4.2/respond.min.js', [], null, true);
+    // -- CSS -- //
+    wp_enqueue_style('bootstrap.min.css', $cdn . '/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css');
+    wp_enqueue_style('style.css', get_template_directory_uri() . '/style.css');
 
-// Add global javascript variable to the theme scripts
-wp_localize_script('scripts.js', 'ajax_url', admin_url('admin-ajax.php'));
-wp_enqueue_script('scripts.js');
+    // -- JavaScript -- //
+    wp_enqueue_script('jquery.min.js', $cdn . '/ajax/libs/jquery/2.2.3/jquery.min.js', [], null, true);
+    wp_enqueue_script('bootstrap.min.js', $cdn . '/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js', [], null, true);
+    wp_register_script('scripts.js', get_template_directory_uri() . '/scripts.js', [], null, true);
+    wp_enqueue_script('html5shiv.min.js', $cdn . '/ajax/libs/html5shiv/3.7.3/html5shiv.min.js', [], null, true);
+    wp_enqueue_script('respond.min.js', $cdn . '/ajax/libs/respond.js/1.4.2/respond.min.js', [], null, true);
+
+    // Add global javascript variable to the theme scripts
+    wp_localize_script('scripts.js', 'ajax_url', admin_url('admin-ajax.php'));
+    wp_enqueue_script('scripts.js');
+});
 
 // -- Facebook Include -- //
 add_action('wp_footer', function () {
