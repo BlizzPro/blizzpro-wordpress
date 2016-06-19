@@ -17,15 +17,7 @@
             </a>
         </div>
 
-        <ul class="nav navbar-nav center-nav">
-            <li class='active'><a href="#">News</a></li>
-            <li><a href="#">Characters</a></li>
-            <li><a href="#">Loot Items</a></li>
-            <li><a href="#">Maps</a></li>
-            <li><a href="#">Patch Notes</a></li>
-            <li><a href="#">BlizzPro.tv</a></li>
-            <li><a href="#">Contact Us (remove)</a></li>
-        </ul>
+        <?php blizzpro_menu(); ?>
 
         <ul class="nav navbar-nav site-links">
             <?php

@@ -1,3 +1,12 @@
+function featuredArticleHandler() {
+    var maxHeight = Math.max.apply(null, $(".featured").map(function () {
+        return $(this).height();
+    }).get());
+
+    // Make all featured divs the same height
+    $(".featured").css("height", maxHeight + "px");
+}
+
 function latestNewsHandler() {
 
     var latest_news     = jQuery('#latest-news');
@@ -38,4 +47,5 @@ function latestNewsHandler() {
 
 jQuery(document).ready(function() {
     latestNewsHandler();
+    featuredArticleHandler();
 });

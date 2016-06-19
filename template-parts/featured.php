@@ -1,5 +1,5 @@
 <div class="col-xs-2">
-    <div class="media media-thumb">
+    <div class="media media-thumb featured">
         <div class="media-top">
             <a href="#">
                 <?php

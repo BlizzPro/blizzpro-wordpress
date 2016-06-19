@@ -1,5 +1,4 @@
 <?php
-
 add_theme_support('post-thumbnails');
 
 set_post_thumbnail_size(380, 162, ['center', 'center']);

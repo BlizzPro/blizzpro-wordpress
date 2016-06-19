@@ -1,5 +1,5 @@
 <?php
-add_action('wp_ajax_nopriv_latest_news', function () {
+function blizzpro_latest_news() {
 
     if (constant('DOING_AJAX')) {
 
@@ -21,4 +21,7 @@ add_action('wp_ajax_nopriv_latest_news', function () {
     }
 
     die();
-});
+}
+
+add_action('wp_ajax_latest_news', 'blizzpro_latest_news');
+add_action('wp_ajax_nopriv_latest_news', 'blizzpro_latest_news');

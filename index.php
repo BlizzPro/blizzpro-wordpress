@@ -18,6 +18,8 @@ get_header(); ?>
             'caller_get_posts' => 1
         ]);
 
+        $count = 0;
+
         if (!empty($sticky)):
         ?>
         <div class="row">
@@ -28,7 +30,15 @@ get_header(); ?>
                     <?php
                     while ($featured->have_posts()): $featured->the_post();
                         get_template_part('template-parts/featured', get_post_format());
+                        $count++;
                     endwhile;
+
+                    // Fill the empty space with placeholders
+                    if ($count < BLIZZPRO_FEATURE_LIMIT) {
+                        for ($i = $count; $i < BLIZZPRO_FEATURE_LIMIT; $i++) {
+                            get_template_part('template-parts/featured-blank', get_post_format());
+                        }
+                    }
                     ?>
                     </div>
                 </div>
@@ -48,7 +58,7 @@ get_header(); ?>
                     <h2>Latest News</h2>
                     <div class="row">
                         <div class="col-xs-12">
-                            <div id="latest-news"></div>
+                            <div id="latest-news" class="latest-news"></div>
                             <a href="javascript:void(0);" class='load-more'>Load More</a>
                         </div>
                     </div>
