@@ -1,7 +1,7 @@
 <div class="col-xs-2">
     <div class="media media-thumb featured">
         <div class="media-top">
-            <a href="#">
+            <a href="<?php echo esc_url(get_permalink()); ?>">
                 <?php
                 if (has_post_thumbnail()):
                     the_post_thumbnail('featured-thumb', ['class' => 'media-object']);
@@ -10,7 +10,7 @@
             </a>
         </div>
         <div class="media-body">
-            <?php the_title(sprintf('<h4 class="media-heading"><a href="%s">', esc_url( get_permalink())), '</a></h4>'); ?>
+            <?php the_title(sprintf('<h4 class="media-heading"><a href="%s">', esc_url(get_permalink())), '</a></h4>'); ?>
             <br/>
             <p>
             <?php echo wp_trim_words(get_the_excerpt(), '25'); ?>

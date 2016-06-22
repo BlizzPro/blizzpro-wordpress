@@ -37,6 +37,9 @@ License: MIT License
 .navbar-default .navbar-nav > li:hover {
   background-color: transparent;
 }
+.navbar-default .navbar-nav > li:hover a {
+  color: rgba(255, 255, 255, 0.8);
+}
 .navbar-default .navbar-nav > li.active:hover a,
 .navbar-default .navbar-nav > li.active a {
   color: #fff;
@@ -114,9 +117,12 @@ h5 {
 }
 .media {
   background-color: rgba(255, 255, 255, 0.04);
-  padding: 0px;
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.4);
   position: relative;
+  padding: 15px;
+}
+.media.featured {
+  padding: 0px !important;
 }
 .media .media-left {
   padding-right: 25px;
@@ -244,6 +250,39 @@ footer a {
 }
 .article-social * {
   vertical-align: bottom;
+}
+.bluepost {
+  font-size: 13px;
+  color: #0791df !important;
+  border-radius: 8px;
+  -moz-border-radius: 8px;
+  -webkit-border-radius: 8px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #333333;
+  background: url("images/bluepostlogo.png") no-repeat scroll right top #13181e;
+  color: #33a7ff;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.8) inset;
+  padding-top: 30px;
+}
+.bluepost p {
+  font-family: Arial;
+  font-size: 14px !important;
+  letter-spacing: 0.8px;
+  text-align: justify;
+  line-height: 22px;
+}
+.bluepost p:first-child {
+  padding-top: 0px;
+  margin-top: 0px !important;
+}
+.bluepost a,
+.bluepost a em {
+  color: #ffffff !important;
+}
+.bluepost * {
+  color: #0791df !important;
 }
 body {
   background-color: #09283d;

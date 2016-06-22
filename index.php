@@ -58,7 +58,7 @@ get_header(); ?>
                     <h2>Latest News</h2>
                     <div class="row">
                         <div class="col-xs-12">
-                            <div id="latest-news" class="latest-news"></div>
+                            <div class="latest-news" data-articles></div>
                             <a href="javascript:void(0);" class='load-more'>Load More</a>
                         </div>
                     </div>

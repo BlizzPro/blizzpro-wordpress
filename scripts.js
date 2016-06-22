@@ -1,4 +1,4 @@
-function featuredArticleHandler() {
+function featuredArticleHeightHandler() {
     var maxHeight = Math.max.apply(null, $(".featured").map(function () {
         return $(this).height();
     }).get());
@@ -7,45 +7,60 @@ function featuredArticleHandler() {
     $(".featured").css("height", maxHeight + "px");
 }
 
-function latestNewsHandler() {
+function articleHandler() {
 
-    var latest_news     = jQuery('#latest-news');
-    var paged           = 1;
-    var posts_per_page  = 10;
+    jQuery('[data-articles]').each(function () {
 
-    jQuery('.load-more').on('click', function () {
+        var container = jQuery(this);
+        var posts_per_page = jQuery(this).data('articles-posts') || 10;
+        var author = jQuery(this).data('articles-author') || false;
+        var category = jQuery(this).data('articles-category') || false;
+        var tag = jQuery(this).data('articles-tag') || false;
+        var action = 'article_ajax';
+        var paged = 1;
 
-        var self = jQuery(this);
-        var original = self.html();
-        self.html('Loading...');
+        jQuery('.load-more').on('click', function () {
 
-        jQuery.ajax({
-            type: 'GET',
-            url: ajax_url,
-            data : {
-                action: 'latest_news',
+            var self = jQuery(this);
+            var original = self.html();
+            self.html('Loading...');
+
+            var param = {
+                action: action,
                 paged: paged,
                 posts_per_page: posts_per_page
-            }
-        })
-        .success(function (data) {
-            if (data.length > 0) {
-                latest_news.html(latest_news.html() + data);
-                paged++;
-            } else {
-                // Remove "load more"
-                self.hide();
-            }
-        })
-        .done(function () {
-            self.html(original);
-        });
+            };
 
-    }).trigger('click'); // Trigger on page load
+            if (author) param['author'] = author;
+            if (category) param['cat'] = category;
+            if (tag) param['tag'] = tag;
+
+            jQuery.ajax({
+                type: 'GET',
+                url: ajax_url,
+                data : param
+            })
+            .success(function (data) {
+                if (data.length > 0) {
+                    container.html(container.html() + data);
+                    paged++;
+                }
+
+                // Remove "load more"
+                if (data.length == 0  || $(".media", container).length < posts_per_page) {
+                    self.hide();
+                }
+            })
+            .done(function () {
+                self.html(original);
+            });
+
+        }).trigger('click'); // Trigger on page load
+    });
 };
 
 
 jQuery(document).ready(function() {
-    latestNewsHandler();
-    featuredArticleHandler();
+    featuredArticleHeightHandler();
+    articleHandler();
 });
