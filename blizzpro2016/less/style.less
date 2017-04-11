@@ -1,0 +1,108 @@
+/*
+Theme Name: BlizzPro 2016
+Author: Chris Brand
+Description: 2016 theme
+Version: 1.0
+License: MIT License
+*/
+
+@import 'variables';
+@import 'nav';
+@import 'typography';
+@import 'sites';
+@import 'media';
+@import 'breadcrumbs';
+@import 'comments';
+@import 'author';
+@import 'footer';
+@import 'related';
+@import 'article';
+@import 'bluepost';
+
+body
+{
+    background-color: @background-color;
+}
+
+.content
+{
+    padding: 35px;
+    background-image: @background-image;
+    background-color: @content-background-color;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.excerpt
+{
+    margin-bottom: 30px;
+}
+
+/* YouTube full width code */
+.vw,
+.videowrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 25px;
+    height: 0;
+
+    background-color: rgba(19, 18, 16, 0.7);
+    border: 1px solid rgba(109, 95, 94, 0.4);
+    border-radius: 0px;
+
+    iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+.lightbox
+{
+    position: initial;
+}
+
+.aligncenter
+{
+    text-align: center;
+    display: block;
+    margin: 0px auto;
+}
+
+img.fullwidth
+{
+    max-width: 100%;
+}
+
+.adbar
+{
+    position: relative;
+    width: 739px;
+    height: 100px;
+    border: 1px solid rgba(109, 95, 94, 0.4);
+    margin: -8px;
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+article .gallery-item img
+{
+    border: none !important;
+}
+
+/* Add paragraph spacing to captioned images */
+.wp-caption
+{
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    p
+    {
+        font-size: 12px !important;
+        font-family: Arial;
+        font-style: italic;
+        margin-top: 10px;
+    }
+}
