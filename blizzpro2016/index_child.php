@@ -14,7 +14,7 @@ get_header(); ?>
         $posts = [];
         $sticky = get_option('sticky_posts');
 
-        if ($stick) {
+        if ($sticky) {
             $featured = get_posts([
                 'posts_per_page' => BLIZZPRO_FEATURE_LIMIT,
                 'post__in' => $sticky,
