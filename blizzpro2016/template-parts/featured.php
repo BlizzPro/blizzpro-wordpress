@@ -20,7 +20,6 @@
                 <p>
                 <?php echo wp_trim_words(get_the_excerpt(), '20'); ?>
                 </p>
-                <i><?php echo time_ago_en(get_post_time()); ?></i>
             </div>
         </div>
     </div>
