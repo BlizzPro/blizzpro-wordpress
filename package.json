@@ -1,0 +1,23 @@
+{
+  "name": "blizzpro2016",
+  "version": "1.0.0",
+  "description": "Wordpress Themes for blizzpro.com",
+  "dependencies": {
+    "less": "^2.7.2"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BlizzPro/blizzpro-wordpress.git"
+  },
+  "scripts": {
+    "blizzpro2016": "./node_modules/.bin/lessc blizzpro2016/less/style.less > blizzpro2016/style.css",
+    "blizzpro2016-hs": "./node_modules/.bin/lessc blizzpro2016-hs/less/style.less > blizzpro2016-hs/style.css",
+    "blizzpro2016-warcraft": "./node_modules/.bin/lessc blizzpro2016-warcraft/less/style.less > blizzpro2016-warcraft/style.css",
+    "blizzpro2016-heroes": "./node_modules/.bin/lessc blizzpro2016-heroes/less/style.less > blizzpro2016-heroes/style.css",
+    "blizzpro2016-diablo": "./node_modules/.bin/lessc blizzpro2016-diablo/less/style.less > blizzpro2016-diablo/style.css",
+    "blizzpro2016-starcraft": "./node_modules/.bin/lessc blizzpro2016-starcraft/less/style.less > blizzpro2016-starcraft/style.css",
+    "blizzpro2016-overwatch": "./node_modules/.bin/lessc blizzpro2016-overwatch/less/style.less > blizzpro2016-overwatch/style.css"
+  },
+  "license": "MIT"
+}
