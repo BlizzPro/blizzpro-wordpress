@@ -7,7 +7,7 @@ License: MIT License
 */
 .navbar-default {
   border-radius: 0px;
-  background-color: #09283d;
+  background-color: #010B14;
   border: none;
   position: relative;
   margin-bottom: 0px;
@@ -263,7 +263,7 @@ ul.crumbs li:not(:first-child):before {
   position: absolute;
 }
 footer {
-  background-color: #09283d;
+  background-color: #010B14;
   padding: 20px;
 }
 footer * {
@@ -383,7 +383,7 @@ img.img-responsive {
   max-width: 85%;
 }
 body {
-  background-color: #09283d;
+  background-color: #010B14;
 }
 .content {
   padding: 35px;

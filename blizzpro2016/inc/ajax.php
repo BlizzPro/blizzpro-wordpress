@@ -59,7 +59,7 @@ function blizzpro_article_ajax() {
             'orderby'               => 'date'
         ];
 
-        if (isset($_GET['tag'])) $data['tag'] = $_GET['tag'];
+        if (isset($_GET['tag'])) $data['tag'] = str_replace(['+', ' '], '-', strtolower($_GET['tag']));
         if (isset($_GET['author'])) $data['author'] = $_GET['author'];
         if (isset($_GET['cat'])) $data['cat'] = $_GET['cat'];
 
